@@ -1,6 +1,11 @@
 {
   "files.associations": {
     "stdlib.h": "c",
-    "curses.h": "c"
+    "curses.h": "c",
+    "smsh.h": "c",
+    "stdio.h": "c",
+    "functional": "c",
+    "varlib.h": "c",
+    "unistd.h": "c"
   }
 }

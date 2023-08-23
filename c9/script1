@@ -1,0 +1,14 @@
+#! /bin/sh
+# script2: a real program with variable, input, and control flow
+
+BOOK=./phonebook.data
+echo find what name in phonebook
+read NAME
+if grep $NAME $BOOK > ./pb.tmp
+then
+  echo Entries for $NAME 
+  cat ./pb.tmp
+else
+  echo No entries for $NAME 
+fi
+rm ./pb.tmp
