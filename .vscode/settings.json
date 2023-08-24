@@ -6,6 +6,8 @@
     "stdio.h": "c",
     "functional": "c",
     "varlib.h": "c",
-    "unistd.h": "c"
+    "unistd.h": "c",
+    "types.h": "c",
+    "uintn-identity.h": "c"
   }
 }
