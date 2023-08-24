@@ -8,6 +8,9 @@
     "varlib.h": "c",
     "unistd.h": "c",
     "types.h": "c",
-    "uintn-identity.h": "c"
+    "uintn-identity.h": "c",
+    "socket.h": "c",
+    "dgram.h": "c",
+    "netdb.h": "c"
   }
 }
