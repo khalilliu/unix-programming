@@ -12,6 +12,7 @@
  *      4. has many other weaknesses, but is a good start
  *
  * test:
+ *       * see host in /etc/hosts
  *       * cgi file: http://hostname:port/exe.cgi
  *       * dir: http://hostname:port/test_dir
  *       * cat: http://hostname:port/index.html
