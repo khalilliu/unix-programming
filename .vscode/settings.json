@@ -11,6 +11,10 @@
     "uintn-identity.h": "c",
     "socket.h": "c",
     "dgram.h": "c",
-    "netdb.h": "c"
+    "netdb.h": "c",
+    "inet.h": "c",
+    "lserv_funcs2.h": "c",
+    "string.h": "c",
+    "shm.h": "c"
   }
 }

@@ -1,0 +1,38 @@
+/*
+ * lserv1.c: license server server program version 1
+ */
+
+#include <netinet/in.h>
+#include <stdio.h>
+#include <sys/socket.h>
+#include <sys/errno.h>
+#include "lserv_funcs1.h"
+
+#define MSG_LEN 128
+
+int main(int argc, char const *argv[])
+{
+  struct sockaddr_in client_addr;
+  socklen_t addrlen = 0;
+  char buf[MSG_LEN];
+  int ret = -1;
+  int server_sock = setup();
+
+  while (1)
+  {
+    addrlen = sizeof(client_addr);
+    ret = recvfrom(server_sock, buf, MSG_LEN, 0, (struct sockaddr *)&client_addr, &addrlen);
+    if (ret != -1)
+    {
+      buf[ret] = '\0';
+      narrate("GOT: ", buf, &client_addr);
+      handle_request(buf, &client_addr, addrlen);
+    }
+    else if (errno == EINTR)
+    {
+      perror("revcfrom");
+    }
+  }
+
+  return 0;
+}
